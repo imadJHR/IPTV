@@ -2,7 +2,7 @@ import { FaWhatsapp } from "react-icons/fa6";
 
 const Support = () => {
   return (
-    <div className="py-16 relative overflow-hidden">
+    <div id="contact" className="py-16 relative h-[500px] overflow-hidden">
       <div className="absolute inset-0 h-max w-full m-auto grid grid-cols-2 -space-x-52 opacity-20 animate-pulse">
         <div className="blur-[106px] h-56 bg-gradient-to-br to-purple-400 from-blue-700 animate-gradient-x"></div>
         <div className="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-indigo-600 animate-gradient-y"></div>

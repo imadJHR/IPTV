@@ -1,3 +1,4 @@
+import logo from "./assets/logo.png"
 const Footer = () => {
   return (
     <footer className="bg-gray-900">
@@ -5,13 +6,14 @@ const Footer = () => {
         <div className="flex flex-col items-center sm:flex-row sm:justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-3 text-white">
-            <div className="w-10 h-10 bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 rounded-full animate-pulse"></div>
-            <span className="text-xl font-bold">LOGO</span>
+           
+            <img src={logo} alt="" className="w-28 h-28" />
+            <span className="text-xl text-green-500 font-mono font-bold">Rk Services</span>
           </div>
 
           {/* Copyright */}
           <p className="mt-4 text-sm text-center text-gray-400 sm:mt-0 sm:text-right">
-            &copy; {new Date().getFullYear()} Your Company. All rights reserved.
+            &copy; {new Date().getFullYear()} Rk Services. All rights reserved.
           </p>
         </div>
 

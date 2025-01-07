@@ -17,7 +17,7 @@ const features = [
 
 const Plan = () => {
   return (
-    <section className="py-24 min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+    <section id="pricing" className="py-24 min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 animate-fade-in">
           <h2 className="font-manrope text-5xl text-center font-bold text-white mb-4">
