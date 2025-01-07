@@ -1,10 +1,10 @@
 import { GiConfirmed } from "react-icons/gi";
 
 const plansData = [
-  { title: "1 Month", price: "$15.99", link: "https://alvo.chat/5rym" },
-  { title: "3 Months", price: "$25.99", link: "https://alvo.chat/5ryn" },
-  { title: "6 Months", price: "$44.99", featured: true, link: "https://alvo.chat/5ryq" },
-  { title: "12 Months", price: "$69.99", link: "https://alvo.chat/5ryv" },
+  { title: "1 Month", price: "$5.00", link: "https://alvo.chat/5rym" },
+  { title: "3 Months", price: "$9.00", link: "https://alvo.chat/5ryn" },
+  { title: "6 Months", price: "$15.00", featured: true, link: "https://alvo.chat/5ryq" },
+  { title: "12 Months", price: "$30.00", link: "https://alvo.chat/5ryv" },
 ];
 
 const features = [
