@@ -1,191 +1,76 @@
-
 import { GiConfirmed } from "react-icons/gi";
+
 const Plan = () => {
   return (
-    <section className="py-24 ">
+    <section className="py-24 min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-12">
+        <div className="mb-12 animate-fade-in">
           <h2 className="font-manrope text-5xl text-center font-bold text-white mb-4">
-            Choose your <span className="text-primary">Plan</span>
+            Choose your <span className="text-primary bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-indigo-600">Plan</span>
           </h2>
-
-          
         </div>
 
-        <div className="space-y-8 lg:grid md:grid-cols-3 lg:grid-cols-4 sm:gap-6  xl:gap-8 lg:space-y-0 lg:items-center">
-        <div className="flex flex-col mx-auto max-w-sm text-gray-900 rounded-2xl bg-gray-50 p-6 xl:py-9 xl:px-12 transition-all duration-500 hover:bg-gray-100">
-            <h3 className="font-manrope text-primary text-2xl font-bold mb-3">1 Month </h3>
-            <div className="flex items-center mb-6">
-              <span className="font-manrope mr-4 text-6xl font-semibold"> $15.99 </span>
-              
-            </div>
-
-            <ul className="mb-12 space-y-6 text-left text-lg text-gray-500">
-              <li className="flex items-center space-x-4">
-              <GiConfirmed className="text-primary " size={25}/>
-                <span className="font-semibold text-black">HD/4K/8K/ IPTV</span>
-              </li>
-              <hr className="p-"/>
-              <li className="flex items-center space-x-4">
-              <GiConfirmed className="text-primary " size={25}/>
-                <span className="font-semibold text-black">+20.000 Channels  </span>
-              </li>
-              <hr/>
-              <li className="flex items-center space-x-4">
-              <GiConfirmed className="text-primary " size={25}/>
-                <span className="font-semibold text-black">24/7 Customer support </span>
-              </li>
-              <hr/>
-              <li className="flex items-center space-x-4">
-              <GiConfirmed className="text-primary " size={25}/>
-                <span className="font-semibold text-black"> +100.000 VOD</span>
-              </li>
-              <hr/>
-              <li className="flex items-center space-x-4">
-              <GiConfirmed className="text-primary " size={25}/>
-                <span className="font-semibold text-black"> 7 days money back guarantee</span>
-              </li>
-              <hr/>
-            </ul>
-            <a
-              href=""
-              className="py-2.5 px-5 bg-indigo-600 shadow-sm rounded-full transition-all duration-500 text-base text-white font-semibold text-center w-fit mx-auto hover:bg-indigo-700"
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-center">
+          {[
+            { title: "1 Month", price: "$15.99" },
+            { title: "3 Months", price: "$25.99" },
+            { title: "6 Months", price: "$44.99", featured: true },
+            { title: "12 Months", price: "$69.99" }
+          ].map((plan, index) => (
+            <div
+              key={index}
+              className={`group relative transform transition-all duration-500 hover:scale-105 ${
+                plan.featured 
+                  ? 'bg-gradient-to-b from-indigo-50 to-white scale-105 shadow-xl' 
+                  : 'bg-white hover:shadow-xl'
+              } rounded-2xl overflow-hidden animate-fade-in`}
+              style={{ animationDelay: `${index * 150}ms` }}
             >
-              Buy Now
-            </a>
-          </div>
+              {plan.featured && (
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 bg-indigo-600 text-white px-4 py-1 rounded-b-lg text-sm font-semibold">
+                  Popular
+                </div>
+              )}
+              <div className="p-6 xl:p-8">
+                <h3 className="font-manrope text-primary text-2xl font-bold mb-3 group-hover:text-indigo-600 transition-colors">
+                  {plan.title}
+                </h3>
+                <div className="flex items-center mb-6">
+                  <span className="font-manrope text-6xl font-semibold group-hover:text-indigo-600 transition-colors">
+                    {plan.price}
+                  </span>
+                </div>
 
-          
+                <ul className="mb-8 space-y-4">
+                  {[
+                    "HD/4K/8K/ IPTV",
+                    "+20.000 Channels",
+                    "24/7 Customer support",
+                    "+100.000 VOD",
+                    "7 days money back guarantee"
+                  ].map((feature, idx) => (
+                    <li key={idx}>
+                      <div className="flex items-center space-x-4 group-hover:transform group-hover:translate-x-1 transition-transform">
+                        <GiConfirmed className="text-indigo-600 flex-shrink-0" size={25} />
+                        <span className="font-semibold text-gray-800">{feature}</span>
+                      </div>
+                      {idx < 4 && <hr className="mt-4 border-gray-100" />}
+                    </li>
+                  ))}
+                </ul>
 
-          <div className="flex flex-col mx-auto max-w-sm text-gray-900 rounded-2xl bg-gray-50 p-6 xl:py-9 xl:px-12 transition-all duration-500 hover:bg-gray-100">
-            <h3 className="font-manrope text-primary text-2xl font-bold mb-3">3 Months </h3>
-            <div className="flex items-center mb-6">
-              <span className="font-manrope mr-2 text-6xl font-semibold">$25.99</span>
-              
-            </div>
-
-            <ul className="mb-12 space-y-6 text-left text-lg text-gray-500">
-              <li className="flex items-center space-x-4">
-              <GiConfirmed className="text-primary " size={25}/>
-                <span className="font-semibold text-black">HD/4K/8K/ IPTV</span>
-              </li>
-              <hr className="p-"/>
-              <li className="flex items-center space-x-4">
-              <GiConfirmed className="text-primary " size={25}/>
-                <span className="font-semibold text-black">+20.000 Channels  </span>
-              </li>
-              <hr/>
-              <li className="flex items-center space-x-4">
-              <GiConfirmed className="text-primary " size={25}/>
-                <span className="font-semibold text-black">24/7 Customer support </span>
-              </li>
-              <hr/>
-              <li className="flex items-center space-x-4">
-              <GiConfirmed className="text-primary " size={25}/>
-                <span className="font-semibold text-black"> +100.000 VOD</span>
-              </li>
-              <hr/>
-              <li className="flex items-center space-x-4">
-              <GiConfirmed className="text-primary " size={25}/>
-                <span className="font-semibold text-black"> 7 days money back guarantee</span>
-              </li>
-              <hr/>
-            </ul>
-            <a
-              href=""
-              className="py-2.5 px-5 bg-indigo-600 shadow-sm rounded-full transition-all duration-500 text-base text-white font-semibold text-center w-fit mx-auto hover:bg-indigo-700"
-            >
-              Buy Now
-            </a>
-          </div>
-          <div className="flex flex-col mx-auto max-w-sm text-gray-900 rounded-2xl bg-indigo-50 transition-all duration-500 hover:bg-indigo-100 ">
-            
-          <div className="p-6 xl:py-9 xl:px-12">
-              <h3 className="font-manrope text-primary text-2xl font-bold mb-3">6 Months</h3>
-              <div className="flex items-center mb-6">
-                <span className="font-manrope mr-2 text-6xl font-semibold">
-                  $44.99
-                </span>
-               
+                <button
+                  className={`w-full py-3 px-6 rounded-full font-semibold transition-all duration-300 transform hover:translate-y-[-2px] ${
+                    plan.featured
+                      ? 'bg-indigo-600 text-white hover:bg-indigo-700 hover:shadow-lg'
+                      : 'bg-gray-100 text-indigo-600 hover:bg-indigo-600 hover:text-white'
+                  }`}
+                >
+                  Buy Now
+                </button>
               </div>
-
-              <ul className="mb-12 space-y-6 text-left text-lg text-gray-500">
-              <li className="flex items-center space-x-4">
-              <GiConfirmed className="text-primary " size={25}/>
-                <span className="font-semibold text-black">HD/4K/8K/ IPTV</span>
-              </li>
-              <hr className="p-"/>
-              <li className="flex items-center space-x-4">
-              <GiConfirmed className="text-primary " size={25}/>
-                <span className="font-semibold text-black">+20.000 Channels  </span>
-              </li>
-              <hr/>
-              <li className="flex items-center space-x-4">
-              <GiConfirmed className="text-primary " size={25}/>
-                <span className="font-semibold text-black">24/7 Customer support </span>
-              </li>
-              <hr/>
-              <li className="flex items-center space-x-4">
-              <GiConfirmed className="text-primary " size={25}/>
-                <span className="font-semibold text-black"> +100.000 VOD</span>
-              </li>
-              <hr/>
-              <li className="flex items-center space-x-4">
-              <GiConfirmed className="text-primary " size={25}/>
-                <span className="font-semibold text-black"> 7 days money back guarantee</span>
-              </li>
-              <hr/>
-            </ul>
-              <a
-                href="javascript:;"
-                className="py-2.5 px-5 bg-indigo-600 shadow-sm rounded-full transition-all duration-500 text-base text-white font-semibold text-center w-fit block mx-auto hover:bg-indigo-700"
-              >
-                Buy Now
-              </a>
             </div>
-          </div>
-
-          <div className="flex flex-col mx-auto max-w-sm text-gray-900 rounded-2xl bg-gray-50 p-6 xl:py-9 xl:px-12 transition-all duration-500 hover:bg-gray-100">
-            <h3 className="font-manrope text-primary text-2xl font-bold mb-3">12 Months </h3>
-            <div className="flex items-center mb-6">
-              <span className="font-manrope mr-2 text-6xl font-semibold">$69.99</span>
-              
-            </div>
-
-            <ul className="mb-12 space-y-6 text-left text-lg text-gray-500">
-              <li className="flex items-center space-x-4">
-              <GiConfirmed className="text-primary " size={25}/>
-                <span className="font-semibold text-black">HD/4K/8K/ IPTV</span>
-              </li>
-              <hr className="p-"/>
-              <li className="flex items-center space-x-4">
-              <GiConfirmed className="text-primary " size={25}/>
-                <span className="font-semibold text-black">+20.000 Channels  </span>
-              </li>
-              <hr/>
-              <li className="flex items-center space-x-4">
-              <GiConfirmed className="text-primary " size={25}/>
-                <span className="font-semibold text-black">24/7 Customer support </span>
-              </li>
-              <hr/>
-              <li className="flex items-center space-x-4">
-              <GiConfirmed className="text-primary " size={25}/>
-                <span className="font-semibold text-black"> +100.000 VOD</span>
-              </li>
-              <hr/>
-              <li className="flex items-center space-x-4">
-              <GiConfirmed className="text-primary " size={25}/>
-                <span className="font-semibold text-black"> 7 days money back guarantee</span>
-              </li>
-              <hr/>
-            </ul>
-            <a
-              href=""
-              className="py-2.5 px-5 bg-indigo-600 shadow-sm rounded-full transition-all duration-500 text-base text-white font-semibold text-center w-fit mx-auto hover:bg-indigo-700"
-            >
-              Buy Now
-            </a>
-          </div>
+          ))}
         </div>
       </div>
     </section>
