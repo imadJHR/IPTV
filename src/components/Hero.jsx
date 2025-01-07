@@ -25,7 +25,13 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 pt-20 pb-16 relative z-10">
         <div className="max-w-6xl mx-auto">
-          <div className={`text-center space-y-8 transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          <div
+            className={`text-center space-y-8 transition-all duration-1000 transform ${
+              isVisible
+                ? "translate-y-0 opacity-100"
+                : "translate-y-10 opacity-0"
+            }`}
+          >
             {/* Main heading with animated gradient */}
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight">
               All-In-One Premium{" "}
@@ -37,8 +43,8 @@ const Hero = () => {
 
             {/* Description with fade-in animation */}
             <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-              Enjoy exceptional image quality up to 4K on any device, anytime and anywhere. 
-              Access a world of entertainment at your fingertips.
+              Enjoy exceptional image quality up to 4K on any device, anytime
+              and anywhere. Access a world of entertainment at your fingertips.
             </p>
 
             {/* Stats section with pop-up animation */}
@@ -46,8 +52,12 @@ const Hero = () => {
               {stats.map((stat, index) => (
                 <div
                   key={index}
-                  className={`flex items-center gap-2 text-gray-300 transition-all duration-700 delay-${index * 200} ${
-                    isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+                  className={`flex items-center gap-2 text-gray-300 transition-all duration-700 delay-${
+                    index * 200
+                  } ${
+                    isVisible
+                      ? "translate-y-0 opacity-100"
+                      : "translate-y-4 opacity-0"
                   }`}
                 >
                   {stat.icon}
@@ -61,14 +71,20 @@ const Hero = () => {
               <button className="group relative inline-flex items-center justify-center px-8 py-3 text-lg font-medium text-white bg-primary rounded-full overflow-hidden transition-all duration-300 ease-out hover:scale-105 hover:shadow-lg hover:shadow-primary/50">
                 <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56 opacity-10"></span>
                 <Play className="w-5 h-5 mr-2" />
-                <span className="relative">Start Free Trial</span>
+                <a href="https://alvo.chat/5ryk" target="_blank">
+                  <span className="relative">Start Free Trial</span>
+                </a>
               </button>
             </div>
 
             {/* Image section with fade-up animation */}
-            <div className={`mt-16 transition-all duration-1000 delay-300 transform ${
-              isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-            }`}>
+            <div
+              className={`mt-16 transition-all duration-1000 delay-300 transform ${
+                isVisible
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-10 opacity-0"
+              }`}
+            >
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent z-10"></div>
                 <img

@@ -14,11 +14,14 @@ const Support = () => {
             Online Support
           </h1>
           <p className="text-lg text-white max-w-lg">
-            Need assistance? We're here to help! Connect with us instantly via WhatsApp.
+            Need assistance? We're here to help! Connect with us instantly via
+            WhatsApp.
           </p>
           <button className="relative inline-flex items-center px-8 py-3 overflow-hidden text-lg font-medium text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 rounded-full shadow-lg transform transition duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-green-300">
             <span className="absolute inset-0 animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)] opacity-25 rounded-full"></span>
-            <span className="relative z-10">WhatsApp Us</span>
+            <a href="https://alvo.chat/5ryw" target="_blank">
+              <span className="relative z-10">WhatsApp Us</span>
+            </a>
           </button>
         </div>
       </div>

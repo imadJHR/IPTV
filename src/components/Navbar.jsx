@@ -1,6 +1,6 @@
 import { Menu, X, Rocket } from "lucide-react";
 import { useState } from "react";
-import logo from "../assets/logo.png"
+import logo from "../assets/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,7 +32,7 @@ const Navbar = () => {
               ))}
             </div>
             <button className="bg-primary hover:bg-primary/90 px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 transform hover:-translate-y-0.5">
-              Free Trial
+              <a href="https://alvo.chat/5ryk" target="_blank">Free Trial</a>
             </button>
           </div>
 
