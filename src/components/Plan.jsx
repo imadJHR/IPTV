@@ -21,7 +21,7 @@ const Plan = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 animate-fade-in">
           <h2 className="font-manrope text-5xl text-center font-bold text-white mb-4">
-            Choose your <span className="text-primary bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-indigo-600">Plan</span>
+            Choose your <span className="text-primary bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-purple-600">Plan</span>
           </h2>
         </div>
 

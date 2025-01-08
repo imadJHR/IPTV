@@ -33,7 +33,7 @@ const Hero = () => {
             }`}
           >
             {/* Main heading with animated gradient */}
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight">
               All-In-One Premium{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary/80 to-primary animate-gradient-x">
                 IPTV
@@ -42,7 +42,7 @@ const Hero = () => {
             </h1>
 
             {/* Description with fade-in animation */}
-            <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-white max-w-2xl mx-auto leading-relaxed">
               Enjoy exceptional image quality up to 4K on any device, anytime
               and anywhere. Access a world of entertainment at your fingertips.
             </p>

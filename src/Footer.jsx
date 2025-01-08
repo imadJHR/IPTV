@@ -8,7 +8,7 @@ const Footer = () => {
           <div className="flex items-center space-x-3 text-white">
            
             <img src={logo} alt="" className="w-28 h-28" />
-            <span className="text-xl text-green-500 font-mono font-bold">Rk Services</span>
+            <span className="text-xl text-purple-400 font-mono font-bold">Rk Services</span>
           </div>
 
           {/* Copyright */}
